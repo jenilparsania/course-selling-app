@@ -1,0 +1,11 @@
+Routing :
+understanding routing in express
+understanding the bad way for doing the Routing -> 
+    => creating separate files for routing and then exporting them 
+    => importing them in the main files
+
+create the schema of database for backend. 
+-> mongoose should be awaited
+
+    
+
