@@ -13,7 +13,7 @@ adminRouter.post("/signup",async function(req,res){
 
     try{
             // why it is awaited 
-            // => because userModel.create returns a password and the reason of returning the
+            // => because userModel.create returns a promise and the reason of returning the
             // promise is because the DB is far away 
         await adminModel.create({
             email:email,
@@ -72,6 +72,8 @@ adminRouter.put("/course",adminMiddleware, async function(req,res){
 
     const {title, description, imageUrl , price , courseId } = req.body;
 
+    // in the updateOne function , first argument is the filter .
+    
     const course = await courseModel.updateOne({
         _id:courseId,
         creatorId : adminId
@@ -107,7 +109,7 @@ adminRouter.post("/course", adminMiddleware,async function(req,res){
 
 
     res.json({
-        message:"preview done"
+        message:"course added"
     });
 });
 
@@ -127,6 +129,6 @@ adminRouter.get("/bulk",adminMiddleware,async function(req,res){
 
 
 
-module.exports = ({
+module.exports = {
     adminRouter:adminRouter
-});
+};

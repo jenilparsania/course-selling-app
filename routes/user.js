@@ -32,8 +32,6 @@ userRouter.post("/signup",async function(req,res){
     }
 
 
-
-
     res.json({
         message:"signup done"
     });

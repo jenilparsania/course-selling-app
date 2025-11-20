@@ -22,10 +22,6 @@ app.use("/admin",adminRouter);
 
 app.use(express.json());
 
-
-
-
-
 async function main(){
     await mongoose.connect(process.env.MONGO_URL);
 

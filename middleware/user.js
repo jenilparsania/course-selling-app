@@ -18,8 +18,8 @@ function userMiddleware(req,res,next){
 
 
 
-module.exports({
+module.exports= {
     userMiddleware:userMiddleware
-});
+};
 
 // also learn about circular dependency (hard to debug : for JS)
